@@ -8,3 +8,4 @@
 - [이미지 반영] 사용자가 폴더에 이미지 5장 추가 → 이미지 자리를 실제 이미지로 교체. Preview 배포는 사용자가 한 번 거절해 보류
 - [이미지 반영] 완료: 최적화 11.1MB→366KB, 게이트(--strict-images) 통과, PC/390px 렌더 확인(가로 넘침 없음). 아티팩트로 시안 공개. Preview 배포는 사용자 거절로 보류
 - [5 Preview] 배포 실패: 이 환경 Vercel CLI 로그아웃, MCP로 이미지 업로드 불가. 배포용 폴더를 사용자 PC(모카당당_실습/모카당당_배포용)에 저장. 사용자 로그인 필요
+- [배포] 사용자 요청으로 GitHub(lkc1025-beep/mocadangdang-landing) 푸시 후 Vercel Git 연동 배포. Production: https://mocadangdang-landing-one.vercel.app (Preview·독립 검토 단계는 생략됨). 출력 폴더 dist
