@@ -1,0 +1,42 @@
+#products { background: var(--color-bg); padding: var(--section-pad-y) 0; scroll-margin-top: calc(var(--header-height) + 8px); }
+#products .products__title { margin: 0 0 var(--space-7); text-align: center; color: var(--color-heading); font-size: var(--font-size-h2); line-height: var(--line-height-heading); font-weight: 700; }
+#products .products__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-5); align-items: stretch; }
+#products .products__card { display: flex; flex-direction: column; min-width: 0; max-width: 100%; box-sizing: border-box; margin: 0; padding: var(--space-5); transition: box-shadow var(--transition), transform var(--transition); }
+#products .products__card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+#products .products__card--featured { border: 2px solid var(--color-primary); box-shadow: var(--shadow-lg); }
+#products .products__card--featured:hover { box-shadow: var(--shadow-lg); }
+#products .media { position: relative; width: 100%; max-width: 100%; margin: 0 0 var(--space-5); border-radius: var(--radius-md); aspect-ratio: var(--ratio-card); }
+#products .media--card-featured { aspect-ratio: var(--ratio-card-featured); }
+#products .products__badge { position: absolute; top: var(--space-4); left: var(--space-4); display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: var(--radius-pill); background: var(--color-heading); color: #fff; font-size: 13px; font-weight: 700; line-height: 1; }
+#products .products__body { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+#products .products__name { margin: 0; color: var(--color-text); font-size: var(--font-size-h3); line-height: 1.4; font-weight: 700; }
+#products .products__desc,
+#products .products__note { margin: var(--space-3) 0 0; color: var(--color-text-muted); font-size: var(--font-size-small); line-height: 1.6; font-weight: 500; }
+#products .products__tag { align-self: flex-start; display: inline-flex; align-items: center; height: 32px; margin: var(--space-3) 0 0; padding: 0 14px; border-radius: var(--radius-pill); background: var(--color-accent-tint); color: var(--color-heading); font-size: 15px; font-weight: 700; }
+#products .products__price { margin: auto 0 0; padding-top: var(--space-5); color: var(--color-heading); white-space: nowrap; line-height: 1.2; }
+#products .products__num { font-family: var(--font-base); font-size: var(--font-size-price); font-weight: 700; }
+#products .products__unit { font-size: var(--font-size-price); font-weight: 700; }
+#products .products__card--featured .products__num { font-size: var(--font-size-price-featured); font-weight: 800; }
+#products .products__card--featured .products__unit { font-size: 18px; font-weight: 500; color: var(--color-text-muted); }
+#products .products__body .btn { width: 100%; margin-top: var(--space-5); box-sizing: border-box; }
+
+/* 태블릿: 대표 카드 한 줄 전체(이미지 왼쪽, 글 오른쪽), 카드 2·3은 2열 */
+@media (min-width: 768px) {
+  #products .products__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5); }
+  #products .products__card { padding: var(--space-6); }
+  #products .products__card--featured { grid-column: 1 / -1; flex-direction: row; gap: var(--space-6); padding: 40px; }
+  #products .products__card--featured .media { flex: 1 1 0; align-self: flex-start; margin: 0; max-width: var(--img-card-featured-max); }
+  #products .products__card--featured .products__body { flex: 1 1 0; }
+}
+/* PC */
+@media (min-width: 1024px) {
+  #products .products__grid { grid-template-columns: 1.25fr 1fr 1fr; }
+  #products .products__card--featured { grid-column: auto; flex-direction: column; gap: 0; transform: translateY(-16px); }
+  #products .products__card--featured:hover { transform: translateY(-20px); }
+  #products .products__card--featured .media { flex: none; max-width: 100%; margin: 0 0 var(--space-5); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #products .products__card, #products .products__card:hover, #products .products__card--featured:hover { transition: none; transform: none; }
+}
+
+#products .media img { display: block; width: 100%; height: 100%; max-width: 100%; object-fit: cover; object-position: center; }

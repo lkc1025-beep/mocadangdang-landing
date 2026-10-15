@@ -1,0 +1,8 @@
+#subscribe { background: var(--color-dark); padding: var(--section-pad-y) 0; scroll-margin-top: calc(var(--header-height) + 8px); text-align: center; }
+#subscribe .subscribe__inner { max-width: 640px; margin: 0 auto; }
+#subscribe .subscribe__title { margin: 0; color: var(--color-on-dark); font-size: var(--font-size-h2); line-height: var(--line-height-heading); font-weight: 700; }
+#subscribe .subscribe__desc { margin: var(--space-4) 0 0; color: var(--color-on-dark-muted); font-size: var(--font-size-lead); line-height: 1.7; }
+#subscribe .subscribe__btn { width: 100%; margin-top: var(--space-6); box-sizing: border-box; }
+@media (min-width: 768px) {
+  #subscribe .subscribe__btn { width: auto; min-width: 220px; }
+}

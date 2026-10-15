@@ -1,0 +1,27 @@
+{
+  "01_bean-poster.png": {
+    "file": "01_bean-poster.webp",
+    "width": 800,
+    "height": 667
+  },
+  "02_daily-brew.png": {
+    "file": "02_daily-brew.webp",
+    "width": 960,
+    "height": 960
+  },
+  "03_single-origin.png": {
+    "file": "03_single-origin.webp",
+    "width": 800,
+    "height": 739
+  },
+  "04_drip-bag.png": {
+    "file": "04_drip-bag.webp",
+    "width": 800,
+    "height": 533
+  },
+  "05_pattern.png": {
+    "file": "05_pattern.webp",
+    "width": 800,
+    "height": 533
+  }
+}

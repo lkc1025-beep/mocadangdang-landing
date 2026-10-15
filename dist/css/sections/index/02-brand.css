@@ -1,0 +1,56 @@
+#brand {
+  background: var(--color-bg);
+  padding: var(--section-pad-y) 0;
+  scroll-margin-top: calc(var(--header-height) + 8px);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+#brand .brand__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#brand .brand__veil {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(242, 240, 235, 0.88);
+}
+#brand .brand__inner {
+  max-width: 720px;
+  text-align: center;
+}
+#brand .brand__bar {
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin: 0 auto var(--space-4);
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+}
+#brand .brand__eyebrow {
+  margin: 0;
+  font-size: var(--font-size-eyebrow);
+  font-weight: var(--weight-bold);
+  line-height: 1.4;
+  letter-spacing: var(--letter-spacing-eyebrow);
+  color: var(--color-primary);
+}
+#brand .brand__title {
+  margin: var(--space-2) 0 0;
+  font-size: var(--font-size-h2);
+  font-weight: var(--weight-bold);
+  line-height: var(--line-height-heading);
+  color: var(--color-heading);
+}
+#brand .brand__desc {
+  margin: var(--space-5) auto 0;
+  max-width: var(--measure);
+  font-size: var(--font-size-lead);
+  line-height: 1.8;
+  color: var(--color-text);
+}
